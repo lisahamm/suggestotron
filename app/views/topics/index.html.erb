@@ -9,7 +9,7 @@
   </thead>
 
   <tbody>
-    <% @topics.each do |topic| %>
+    <% @topics.sort_by { |topic| topic.votes.size }.reverse.each do |topic| %>
       <tr>
         <td><%= link_to topic.title, topic %></td>
         <td><%= pluralize(topic.votes.count, "vote") %></td>
@@ -24,3 +24,5 @@
 <br>
 
 <%= link_to 'New Topic', new_topic_path %>
+
+
