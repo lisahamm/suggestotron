@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about/index'
+
   resources :topics do
     member do
       post 'upvote'
