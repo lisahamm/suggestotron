@@ -2,9 +2,8 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
-  # GET /topics.json
   def index
-    @topics = Topic.all
+    @topics = Topic.by_vote_count
   end
 
   # GET /topics/1
