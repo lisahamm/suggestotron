@@ -1,8 +1,13 @@
 <% provide(:title, "Home") %>
-<h1>Listing topics</h1>
+<div class="center jumbotron">
+  <h1>Welcome to Suggestotron</h1>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
 
 <table>
   <thead>
+    <th>Listing Topics</th>
     <tr>
       <th>Title</th>
       <th colspan="3"></th>

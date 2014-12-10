@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'signup' => 'users#new'
+
   get 'about/index'
 
   resources :topics do
